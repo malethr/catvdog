@@ -12,5 +12,11 @@ $(document).ready(function() {
   $("button#both").click(function() {
     $("ul#dogs").prepend("<li><img width='100%' src='img/dog2.jpeg'></li>");
     $("ul#cats").prepend("<li><img width='100%' src='img/cat2.jpeg'></li>");
+    $("ul#dogs").children("li").first().click(function() {
+      $(this).remove();
+    });
+    $("ul#cats").children("li").first().click(function() {
+      $(this).remove();
+    });
   });
 });
